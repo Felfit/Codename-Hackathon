@@ -38,12 +38,25 @@ function dofunction(params) {
 }
 
 function findMe() {
-  var coord = [];
+  var coords = [];
   navigator.geolocation.getCurrentPosition(function(pos){
-    coord = [pos.coords.longitude, pos.coods.latitude];
+    coord = [pos.coords.longitude, pos.coords.latitude];
   });
-  map.flyTo({center : coods});
-  console.log(coord);
+  map.flyTo({center : coords});
+  console.log(coords);
+
+  createMarker(coords);
+}
+
+function createMarker(coord) {
+  var el = document.createElement('img');
+  el.className = 'marker';
+  el.src = "img/youarehere.png";
+
+  // make a marker for each feature and add to the map
+  new mapboxgl.Marker(el)
+  .setLngLat(coord)
+  .addTo(map)
 }
 
 map.on("mousedown", function(e){
