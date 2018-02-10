@@ -27,6 +27,12 @@ geojson.features.forEach(function(marker,i) {
   new mapboxgl.Marker(el)
   .setLngLat(marker.geometry.coordinates)
   .setPopup(new mapboxgl.Popup({ offset: 25 }) // add popups
-  .setHTML('<h3>' + marker.properties.title + '</h3><p>' + marker.properties.description + '</p>'))
+  .setHTML('<h3>' + marker.properties.title + '</h3><p>' + marker.properties.description + '</p>'
++'<input type="button" onclick="dofunction('+i+')" value="Click Me!">'))
   .addTo(map);
 });
+
+function dofunction(params) {
+    map.flyTo({center : geojson.features[params].geometry.coordinates})
+    console.log(geojson.features[params].geometry.coordinates)
+}
