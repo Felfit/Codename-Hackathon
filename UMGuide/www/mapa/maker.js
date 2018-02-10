@@ -7,8 +7,8 @@ var geojson = {
         coordinates: [-8.395659, 41.560356], 
       },
       properties: {
-        title: 'Mapbox',
-        description: 'Complexo Pedagógico 1'
+        title: 'Complexo Pedagógico 1',
+        description: ''
       }
     },
     {
@@ -18,8 +18,8 @@ var geojson = {
           coordinates: [-8.397723, 41.560088], 
         },
         properties: {
-          title: 'Mapbox',
-          description: 'Complexo Pedagógico 2'
+          title: 'Complexo Pedagógico 2',
+          description: ''
         }
     },
     {
@@ -29,8 +29,8 @@ var geojson = {
           coordinates: [-8.397997, 41.560820], 
         },
         properties: {
-          title: 'Mapbox',
-          description: 'Complexo Pedagógico 3'
+          title: 'Complexo Pedagógico 3',
+          description: ''
         }
     },
     {
@@ -40,8 +40,8 @@ var geojson = {
         coordinates: [-8.396735, 41.560020]
       },
       properties: {
-        title: 'Mapbox',
-        description: 'Biblioteca Geral | Escola Superior de Enfermagem'
+        title: 'Biblioteca Geral | Escola Superior de Enfermagem',
+        description: ''
       }
     },
     {
@@ -51,8 +51,8 @@ var geojson = {
           coordinates: [-8.396806, 41.560328], 
         },
         properties: {
-          title: 'Mapbox',
-          description: 'Instituto das Artes e Ciencias Humanas'
+          title: 'Instituto das Artes e Ciencias Humanas',
+          description: ''
         }
     },
     {
@@ -62,8 +62,8 @@ var geojson = {
           coordinates: [-8.396318, 41.561140], 
         },
         properties: {
-          title: 'Mapbox',
-          description: 'Escola de Ciencias'
+          title: 'Escola de Ciencias',
+          description: ''
         }
     },
     {
@@ -73,8 +73,8 @@ var geojson = {
           coordinates: [-8.397168, 41.561704], 
         },
         properties: {
-          title: 'Mapbox',
-          description: 'Escola de Engenharia'
+          title: 'Escola de Engenharia',
+          description: ''
         }
     },
     {
@@ -84,8 +84,8 @@ var geojson = {
           coordinates: [-8.398429, 41.561474], 
         },
         properties: {
-          title: 'Mapbox',
-          description: 'Escola de Economia'
+          title: 'Escola de Economia e Gestao',
+          description: ''
         }
     },
     {
@@ -95,8 +95,8 @@ var geojson = {
           coordinates: [-8.394953, 41.561918], 
         },
         properties: {
-          title: 'Mapbox',
-          description: 'Complexo Desportivo da Universidade do Minho'
+          title: 'Complexo Desportivo',
+          description: ''
         }
     },
     {
@@ -106,30 +106,108 @@ var geojson = {
           coordinates: [-8.394276, 41.562825], 
         },
         properties: {
-          title: 'Mapbox',
-          description: 'Serviços Técnicos'
+          title: 'Serviços Técnicos',
+          description: ''
         }
     },
     {
         type: 'Feature',
         geometry: {
           type: 'Point',
-          coordinates: [-8.397997, 41.560820], 
+          coordinates: [-8.398176, 41.561983], 
         },
         properties: {
-          title: 'Mapbox',
-          description: 'Complexo Pedagógico 3'
+          title: 'Restaurante Cantina Grill',
+          description: ''
         }
     },
     {
         type: 'Feature',
         geometry: {
           type: 'Point',
-          coordinates: [-8.397997, 41.560820], 
+          coordinates: [-8.399069, 41.562236], 
         },
         properties: {
-          title: 'Mapbox',
-          description: 'Complexo Pedagógico 3'
+          title: 'Serviços de Ação Social',
+          description: ''
         }
-    }]
+    },
+    {
+        type: 'Feature',
+        geometry: {
+          type: 'Point',
+          coordinates: [-8.399686, 41.559415], 
+        },
+        properties: {
+          title: 'Instituto de Educação',
+          description: ''
+        }
+    },
+    {
+        type: 'Feature',
+        geometry: {
+          type: 'Point',
+          coordinates: [-8.399790, 41.559837], 
+        },
+        properties: {
+          title: 'Escola de Psicologia',
+          description: ''
+        }
+    },
+    {
+        type: 'Feature',
+        geometry: {
+          type: 'Point',
+          coordinates: [-8.399911, 41.560252], 
+        },
+        properties: {
+          title: 'Instituto de Ciências Sociais',
+          description: ''
+        }
+    },
+    {
+        type: 'Feature',
+        geometry: {
+          type: 'Point',
+          coordinates: [-8.400019, 41.560630], 
+        },
+        properties: {
+          title: 'Escola de Engenharia 2',
+          description: ''
+        }
+    },
+    {
+        type: 'Feature',
+        geometry: {
+          type: 'Point',
+          coordinates: [-8.400139, 41.560997], 
+        },
+        properties: {
+          title: 'Escola de Direito',
+          description: ''
+        }
+    },
+    {
+        type: 'Feature',
+        geometry: {
+          type: 'Point',
+          coordinates: [-8.400224, 41.561498], 
+        },
+        properties: {
+          title: 'Instituto para a Bio-Sustentabilidade',
+          description: ''
+        }
+    },
+    {
+        type: 'Feature',
+        geometry: {
+          type: 'Point',
+          coordinates: [-8.400979, 41.563858], 
+        },
+        properties: {
+          title: 'Escola de Medicina',
+          description: ''
+        }
+    }
+    ]
   };
