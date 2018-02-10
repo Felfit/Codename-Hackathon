@@ -36,3 +36,7 @@ function dofunction(params) {
     map.flyTo({center : geojson.features[params].geometry.coordinates})
     console.log(geojson.features[params].geometry.coordinates)
 }
+
+function findMe(){
+  console.log("youre here");
+}

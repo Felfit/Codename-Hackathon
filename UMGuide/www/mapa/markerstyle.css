@@ -20,4 +20,11 @@
 	width: 8%;
     height: auto;
     max-width: 50px;
+    outline: none;
+}
+
+#findme:active {
+	width: 7%;
+	bottom: 10.25%;
+	right: 5.25%;
 }
