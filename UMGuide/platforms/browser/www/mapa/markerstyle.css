@@ -20,4 +20,9 @@
 	width: 8%;
     height: auto;
     max-width: 50px;
+    outline: none;
+}
+
+#findme:active {
+	filter: blur(5px);
 }

@@ -28,7 +28,7 @@ geojson.features.forEach(function(marker,i) {
   .setLngLat(marker.geometry.coordinates)
   .setPopup(new mapboxgl.Popup({ offset: 25 }) // add popups
   .setHTML('<h3>' + marker.properties.title + '</h3><p>' + marker.properties.description + '</p>'
-+'<input type="button" onclick="dofunction('+i+')" value="Click Me!">'))
++'<input type="button" class="btn" onclick="dofunction('+i+')" value="Click Me!">'))
   .addTo(map);
 });
 
@@ -37,6 +37,29 @@ function dofunction(params) {
     console.log(geojson.features[params].geometry.coordinates)
 }
 
-function findMe(){
-  console.log("youre here");
+function findMe() {
+  var coords = [];
+  navigator.geolocation.getCurrentPosition(function(pos){
+    coord = [pos.coords.longitude, pos.coords.latitude];
+  });
+  map.flyTo({center : coords});
+  console.log(coords);
+
+  createMarker(coords);
 }
+
+function createMarker(coord) {
+  var el = document.createElement('img');
+  el.className = 'marker';
+  el.src = "img/youarehere.png";
+
+  // make a marker for each feature and add to the map
+  new mapboxgl.Marker(el)
+  .setLngLat(coord)
+  .addTo(map)
+}
+
+map.on("mousedown", function(e){
+  var coord = e.lngLat;
+  console.log([coord.lng, coord.lat]);
+});

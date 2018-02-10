@@ -17,10 +17,36 @@
 </head>
 
 <body>
-	<!--
 	<nav class="navbar bg-dark navbar-fixed-left sidebar flex-column">
-		<a class="navbar-brand nav-link" href="#">UM Guide</a>
 		<ul class="navbar-nav">
+				<div class="navbar" id="navb">
+					<ul class="navbar-nav mr-auto">
+							<div class="input-group mb-3">
+								<input type="text" class="form-control" placeholder="Complexo">
+								<div class="input-group-append">
+									<button class="btn btn-outline-secondary" type="button">
+											<i class="fa fa-search" style="color: White"></i></button>
+								</div>
+							</div>
+							<li class="nav-item">
+								<a class="nav-link" href="#">
+									<i class="fa fa-grey fa-map-marker"></i> Mapa
+								</a>
+							</li>
+								<li class="nav-item">
+								<a class="nav-link" href="#">
+									<i class="fa fa-grey fa-calendar"></i> Eventos
+								</a>
+							</li>
+					</ul>
+				<!--	<form class="form-inline my-2 my-lg-0">
+							<input class="form-control mr-sm-2" type="text" placeholder="Search">
+							<i class="fa fa-search"></i>
+							<button class="btn btn-success my-2 my-sm-0 align-right" type="button">Procurar</button>
+					</form> -->
+				</div>
+
+				<!--
 	        <li href="/dashboard" class="nav-item">
 	            <a href="#" class="nav-link">
 	            	<i class="fa fa-fw fa-dashboard"></i> Dashboard
@@ -31,33 +57,21 @@
 	            	<a href="#" class="nav-link">
 	                	<i class="fa fa-plus"></i>menu
 	                </a>
-	            </li>
+			</li> -->
 	        </ul>
-        </ul>
+		</ul>
+		
 	</nav>
--->
+
 	<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
 	  	<a class="navbar-brand" href="#">UMinho Guide</a>
-	  	<button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navb">
+	  	<button class="navbar-toggler navbar-toggler-right" onclick="toggleSideBar()" type="button" data-toggle="collapse" data-target="#navb">
 	    	<span class="navbar-toggler-icon"></span>
 	  	</button>
-
-	  	<div class="collapse navbar-collapse" id="navb">
-	    	<ul class="navbar-nav mr-auto">
-	      		<li class="nav-item">
-	        		<a class="nav-link" href="#">Mapa</a>
-	      		</li>
-	      		<li class="nav-item">
-	        		<a class="nav-link" href="#">Eventos</a>
-	      		</li>
-	    	</ul>
-	    	<form class="form-inline my-2 my-lg-0">
-	      		<input class="form-control mr-sm-2" type="text" placeholder="Search">
-	      		<button class="btn btn-success my-2 my-sm-0 align-right" type="button">Procurar</button>
-	    	</form>
-	  	</div>
 	</nav>
 	<iframe id="map" src="mapa/index.html" class="border-0 w-100 h-100"></iframe>
+
+	<script src="./js/sidebar.js"></script>
 </body>
 
 </html>

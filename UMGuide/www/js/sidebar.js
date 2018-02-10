@@ -1,0 +1,3 @@
+function toggleSideBar(){
+    $(".sidebar").toggle();
+}
