@@ -1,3 +1,3 @@
 # Codename-Hackathon
 
-metam-me pila!
+Mapa interativo e gestor de eventos da Universidade do Minho.
