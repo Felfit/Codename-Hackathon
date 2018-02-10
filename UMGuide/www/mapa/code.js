@@ -42,24 +42,23 @@ function findMe() {
   navigator.geolocation.getCurrentPosition(function(pos){
     coord = [pos.coords.longitude, pos.coords.latitude];
   });
-  map.flyTo({center : coords});
-  console.log(coords);
-
-  createMarker(coords);
-}
-
-function createMarker(coord) {
-  var el = document.createElement('img');
-  el.className = 'marker';
-  el.src = "img/youarehere.png";
-
-  // make a marker for each feature and add to the map
-  new mapboxgl.Marker(el)
-  .setLngLat(coord)
-  .addTo(map)
+  
+  console.log(coord);
 }
 
 map.on("mousedown", function(e){
   var coord = e.lngLat;
   console.log([coord.lng, coord.lat]);
 });
+
+var directions = new MapboxDirections({
+    accessToken: mapboxgl.accessToken,
+    unit: "metric",
+    profile: "mapbox/walking",
+    controls: {
+      input: false,
+      instructions: true,
+      profileSwitcher: false
+    }
+});
+map.addControl(directions, 'bottom-left');
