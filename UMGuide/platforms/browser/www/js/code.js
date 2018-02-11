@@ -65,22 +65,20 @@ function dofunction(params) {
 
 function findMe() {
   navigator.geolocation.getCurrentPosition(function(pos){
-    $("#me").remove();
-    var marker = createMarker([pos.coords.longitude, pos.coords.latitude], "me");
+    createMarker([pos.coords.longitude, pos.coords.latitude]);
   });
 }
 
-function createMarker(coord, id = "") {
+function createMarker(coord) {
   var el = $("<img>")
             .addClass('marker')
-            .attr("id", id)
             .attr("src","img/youarehere.png").get(0);
+  console.log(el);
 
   // make a marker for each feature and add to the map
   new mapboxgl.Marker(el)
   .setLngLat(coord)
   .addTo(map)
-  return el;
 }
 
 map.on("mousedown", function(e){
@@ -99,4 +97,4 @@ var directions = new MapboxDirections({
   }
 });
 
-//map.addControl(directions, 'bottom-left');
+map.addControl(directions, 'bottom-left');
