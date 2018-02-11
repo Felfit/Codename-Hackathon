@@ -8,11 +8,13 @@ body, html {
 	overflow-y: hidden;
 }
 
-.mapa{
+.fixed-top{
+	height: 55px;
+}
+
+.layout{
 	margin-top: 55px;
 	width: 100%;
-	height: 100%;
-	margin-bottom: 0px;
 }
 
 .navbar{
@@ -27,3 +29,43 @@ body, html {
 	width: 100%;
 	height: 100%;
 }
+
+#events{
+	background-color: #F3F3F3;
+	overflow-y: auto;
+	z-index: 100;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+}
+ #map{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+ }
+
+ .event{
+	position: static; 
+	margin-top: 5%;
+	margin-left: 5%;
+	width: 90%;
+ }
+
+ h3 {
+	color: #020202;
+	font-family: 'Source Sans Pro';
+	font-size: 28px; font-weight: 400;
+	line-height: 32px;
+	text-align: center;
+ }
+
+ .event-image {
+	 float:left;
+	 max-width: 100%;
+	 height: auto;
+ }
+
+ .event-description {
+	 font-size: 14px;
+	 width: 100%;
+ }

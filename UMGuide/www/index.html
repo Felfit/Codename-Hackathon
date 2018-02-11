@@ -38,9 +38,14 @@
 							</button>
 						</div>
 					</div>
-					<li class="nav-item clicked" onclick="addExclusiveClickedClass(this)">
+					<li class="nav-item clicked" onclick="addExclusiveClickedClass(this); openMap();">
 						<a class="nav-link" href="#">
 							<i class="fa fa-grey fa-map-marker"></i> Mapa
+						</a>
+					</li>
+					<li class="nav-item" onclick="addExclusiveClickedClass(this); openEventPanel(); getEvents();">
+						<a class="nav-link" href="#">
+							<i class="fa fa-grey fa-calendar"></i> Eventos
 						</a>
 					</li>
 				</ul>
@@ -48,13 +53,16 @@
 		</ul>
 	</nav>
 
-	<div class="mapa">
-		<iframe id="iframeMap" src="mapa/index.html" class="border-0 w-100 h-100"></iframe>
+	<div class="layout">
+		<div id="events" style="display: none;"> </div>
+		<div id="map">
+			<iframe src="mapa/index.html" class="border-0 w-100 h-100"></iframe>
+		</div>
 	</div> 
 
 	<div class="toToggle" onclick="toggleSideBar()" display:'none'> </div>
 
-	<script src="./js/information.js"></script>
+	<script src="./js/event.js"></script>
 	<script src="./js/sidebar.js"></script>
 </body>
 
