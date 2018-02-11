@@ -19,13 +19,10 @@ function isOpen(i){
   var d = new Date();
   var day = d.getDay();
   if (schedules[i] === null) return "";
-  var open = schedules[i][day].open * 1000;
-  var close = schedules[i][day].close * 1000;
+  var open = schedules[i][day].open * 3600000; // h -> ms
+  var close = schedules[i][day].close * 3600000;
 
   var currentTime =(d.getTime() - d.setHours(0,0,0,0));
-  console.log("isto" + currentTime);
-  console.log(open);
-  console.log(close);
 
   if(currentTime > open){
     if(currentTime < close){
@@ -44,47 +41,68 @@ function isOpen(i){
 geojson.features.forEach(function(marker,i) {
 
   // create a HTML element for each feature
-  var el = document.createElement('img');
-  el.className = 'marker';
-  el.src = "img/"+(i)+".png";
+  var el = $("<img>").addClass("marker").attr("src","img/"+(i)+".png").get(0);
 
   // make a marker for each feature and add to the map
   new mapboxgl.Marker(el)
   .setLngLat(marker.geometry.coordinates)
   .setPopup(new mapboxgl.Popup({ offset: 25 }) // add popups
   .setHTML(
-    '<h3>' + marker.properties.title + '</h3><p>' + marker.properties.description + '</p><p>' + isOpen(i) + '</p>'
-    + '<input type="button" class="btn" onclick="moreInfo('+i+')" value="More info">'))
+    '<h3>' + marker.properties.title + '</h3><p>' + marker.properties.description + '</p><p>' + isOpen(i) + '</p>'))
 
   .addTo(map);
 });
 
-function dofunction(params) {
-    console.log(params);
-}
+bares.forEach(function(marker, i) {
+  var el = $("<img>").addClass("bares").attr("src","img/bar.png").get(0);
+
+  new mapboxgl.Marker(el)
+  .setLngLat(bares[i])
+  .addTo(map);
+});
+
+pois.forEach(function(marker, i) {
+  var el = document.createElement('img');
+  el.className = 'pois';
+  el.src = "img/poi"+i+".png";
+
+  new mapboxgl.Marker(el)
+  .setLngLat(pois[i])
+  .addTo(map);
+});
 
 function findMe() {
   navigator.geolocation.getCurrentPosition(function(pos){
-    createMarker([pos.coords.longitude, pos.coords.latitude]);
+    removeHereMarker();
+    createHereMarker([pos.coords.longitude, pos.coords.latitude]);
   });
 }
 
-function createMarker(coord) {
+function toggleBares(elemClicked) {
+	$('.bares').toggle();
+	var notColored = $(elemClicked).hasClass('notColored');
+	if(notColored){
+		$(elemClicked).removeClass('notColored');
+	} else {
+		$(elemClicked).addClass('notColored');
+	}
+}
+
+function removeHereMarker() {
+  $(".here").remove();
+}
+
+function createHereMarker(coord) {
   var el = $("<img>")
-            .addClass('marker')
+            .addClass('here')
+            .addClass("marker")
             .attr("src","img/youarehere.png").get(0);
-  console.log(el);
 
   // make a marker for each feature and add to the map
   new mapboxgl.Marker(el)
   .setLngLat(coord)
   .addTo(map)
 }
-
-map.on("mousedown", function(e){
-  var coord = e.lngLat;
-  console.log([coord.lng, coord.lat]);
-});
 
 var directions = new MapboxDirections({
   accessToken: mapboxgl.accessToken,

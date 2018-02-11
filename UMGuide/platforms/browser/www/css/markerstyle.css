@@ -24,5 +24,30 @@
 }
 
 #findme:active {
-	filter: blur(5px);
+	filter: blur(3px);
+}
+
+.notColored {
+  filter: grayscale(100%);
+}
+
+#baresbtn {
+  position: fixed;
+  bottom: 20%;
+  right: 5%;
+  width: 8%;
+  height: auto;
+  max-width: 50px;
+  outline: none;
+}
+
+.bares {
+  width: 8%;
+  max-width: 50px;
+  display: none;
+}
+
+.pois {
+  width: 8%;
+  max-width: 50px;
 }
