@@ -23,5 +23,5 @@ function addExclusiveClickedClass(elemClicked){
 }
 
 $("#submit").on("click",function(){
-    $("#iframeMap").attr("src","mapa/index.html#q="+$("#search").val());
+    $("#iframeMap").attr("src","mapa/index.html#q="+$("#search").val().replace(" ","+"));
 });

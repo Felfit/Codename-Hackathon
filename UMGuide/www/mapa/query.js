@@ -1,9 +1,10 @@
 $(window).on("load hashchange",function(){
-	var hash = location.hash;
-  if(location.hash.startsWith("q=")){
-    return false;
-  }
-	var queries = hash.split(" ");
+	var hash = location.hash.replace("+"," ");
+  	if(location.hash.startsWith("q=")){
+    	return false;
+  	}
+  	console.log(hash);
+	var queries = hash.split("-");
 	var features = geojson.features;
 	var quality = [];
 	var max = 0;
