@@ -1,3 +1,0 @@
-# Codename-Hackathon
-
-Olá
