@@ -38,6 +38,7 @@ $(window).on("load hashchange",function(){
         '<h3>' + features[maxIndex].properties.title + '</h3><p>' + features[maxIndex].properties.description + '</p><p>' + isOpen(maxIndex) + '</p>')
 
       .addTo(map);
+      map.panTo(features[maxIndex].geometry.coordinates);
   }
   location.hash = "";
 });

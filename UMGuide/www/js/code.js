@@ -36,16 +36,21 @@ function isOpen(i){
 
   if(currentTime > open){
     if(currentTime < close){
-      return "Aberto, fecha às" + new Date(close).getHours() + ":" + new Date(close).getMinutes();
+      return "Aberto, fecha às " + new Date(close).getHours() + ":" + doubleDigits(new Date(close).getMinutes());
     }
     else{
       return "Fechado"
     }
   }
   else{
-    return "Fechado, abre às" + new Date(open).getHours() + ":" + new Date(open).getMinutes();
+    return "Fechado, abre às " + new Date(open).getHours() + ":" + doubleDigits(new Date(open).getMinutes());
   }
 }
+function doubleDigits(min) {
+	if(min < 10) return '0' + min
+	return min
+}
+
 function filterEvents(local){
     html = "";
     $.ajax({
