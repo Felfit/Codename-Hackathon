@@ -19,8 +19,8 @@ function isOpen(i){
   var d = new Date();
   var day = d.getDay();
   if (schedules[i] === null) return "";
-  var open = schedules[i][day].open * 1000;
-  var close = schedules[i][day].close * 1000;
+  var open = schedules[i][day].open * 3600000; // h -> ms
+  var close = schedules[i][day].close * 3600000;
 
   var currentTime =(d.getTime() - d.setHours(0,0,0,0));
   console.log("isto" + currentTime);
