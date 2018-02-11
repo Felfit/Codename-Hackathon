@@ -9,11 +9,11 @@ body, html {
 }
 
 .fixed-top{
-	height: 12%;
+	height: 55px;
 }
 
 .layout{
-	margin-top: 12%;
+	margin-top: 55px;
 	width: 100%;
 }
 

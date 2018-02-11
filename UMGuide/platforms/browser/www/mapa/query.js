@@ -31,7 +31,15 @@ $(window).on("load hashchange",function(){
 			}
 		}
 	}
-	console.log(maxIndex);
+  if(maxIndex !== null){
+    new mapboxgl.Popup({closeOnClick: false})
+      .setLngLat(features[maxIndex].geometry.coordinates)
+      .setHTML(
+        '<h3>' + features[maxIndex].properties.title + '</h3><p>' + features[maxIndex].properties.description + '</p><p>' + isOpen(maxIndex) + '</p>')
+
+      .addTo(map);
+  }
+  location.hash = "";
 });
 
 function similarity(s1, s2) {
