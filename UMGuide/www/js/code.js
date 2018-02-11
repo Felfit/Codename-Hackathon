@@ -53,15 +53,10 @@ geojson.features.forEach(function(marker,i) {
   .setLngLat(marker.geometry.coordinates)
   .setPopup(new mapboxgl.Popup({ offset: 25 }) // add popups
   .setHTML(
-    '<h3>' + marker.properties.title + '</h3><p>' + marker.properties.description + '</p><p>' + isOpen(i) + '</p>'
-    + '<input type="button" class="btn" onclick="moreInfo('+i+')" value="More info">'))
+    '<h3>' + marker.properties.title + '</h3><p>' + marker.properties.description + '</p><p>' + isOpen(i) + '</p>'))
 
   .addTo(map);
 });
-
-function dofunction(params) {
-    console.log(params);
-}
 
 function findMe() {
   navigator.geolocation.getCurrentPosition(function(pos){
