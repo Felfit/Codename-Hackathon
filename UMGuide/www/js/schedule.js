@@ -90,7 +90,7 @@ var schedules = [
       open: 8,
       close: 20
 	}],
-	
+
 	[{
       open: 8,
       close: 20
@@ -113,23 +113,328 @@ var schedules = [
       open: 8,
       close: 20
 	}],
-	null,
-	null,
-	null,
-	null,
-	null,
-	null,
-	null,
-	null,
-	null,
-	null,
-	null,
-	null,
-	null,
-	null,
-	null,
-	null,
-	null
+
+	[{
+      open: 8,
+      close: 20
+    },{
+      open: 8,
+      close: 20
+	},{
+      open: 8,
+      close: 20
+	},{
+      open: 8,
+      close: 20
+	},{
+      open: 8,
+      close: 20
+	},{
+      open: 8,
+      close: 20
+	},{
+      open: 8,
+      close: 20
+	}],
+
+	[{
+      open: 8,
+      close: 20
+    },{
+      open: 8,
+      close: 20
+	},{
+      open: 8,
+      close: 20
+	},{
+      open: 8,
+      close: 20
+	},{
+      open: 8,
+      close: 20
+	},{
+      open: 8,
+      close: 20
+	},{
+      open: 8,
+      close: 20
+	}],
+
+	[{
+      open: 8,
+      close: 20
+    },{
+      open: 8,
+      close: 20
+	},{
+      open: 8,
+      close: 20
+	},{
+      open: 8,
+      close: 20
+	},{
+      open: 8,
+      close: 20
+	},{
+      open: 8,
+      close: 20
+	},{
+      open: 8,
+      close: 20
+	}],
+
+	[{
+      open: 8,
+      close: 20
+    },{
+      open: 8,
+      close: 20
+	},{
+      open: 8,
+      close: 20
+	},{
+      open: 8,
+      close: 20
+	},{
+      open: 8,
+      close: 20
+	},{
+      open: 8,
+      close: 20
+	},{
+      open: 8,
+      close: 20
+	}],
+
+	[{
+      open: 8,
+      close: 20
+    },{
+      open: 8,
+      close: 20
+	},{
+      open: 8,
+      close: 20
+	},{
+      open: 8,
+      close: 20
+	},{
+      open: 8,
+      close: 20
+	},{
+      open: 8,
+      close: 20
+	},{
+      open: 8,
+      close: 20
+	}],
+
+	[{
+      open: 8,
+      close: 20
+    },{
+      open: 8,
+      close: 20
+	},{
+      open: 8,
+      close: 20
+	},{
+      open: 8,
+      close: 20
+	},{
+      open: 8,
+      close: 20
+	},{
+      open: 8,
+      close: 20
+	},{
+      open: 8,
+      close: 20
+	}],
+
+	[{
+      open: 8,
+      close: 20
+    },{
+      open: 8,
+      close: 20
+	},{
+      open: 8,
+      close: 20
+	},{
+      open: 8,
+      close: 20
+	},{
+      open: 8,
+      close: 20
+	},{
+      open: 8,
+      close: 20
+	},{
+      open: 8,
+      close: 20
+	}],
+
+	[{
+      open: 8,
+      close: 20
+    },{
+      open: 8,
+      close: 20
+	},{
+      open: 8,
+      close: 20
+	},{
+      open: 8,
+      close: 20
+	},{
+      open: 8,
+      close: 20
+	},{
+      open: 8,
+      close: 20
+	},{
+      open: 8,
+      close: 20
+	}],
+
+	[{
+      open: 8,
+      close: 20
+    },{
+      open: 8,
+      close: 20
+	},{
+      open: 8,
+      close: 20
+	},{
+      open: 8,
+      close: 20
+	},{
+      open: 8,
+      close: 20
+	},{
+      open: 8,
+      close: 20
+	},{
+      open: 8,
+      close: 20
+	}],
+
+	[{
+      open: 8,
+      close: 20
+    },{
+      open: 8,
+      close: 20
+	},{
+      open: 8,
+      close: 20
+	},{
+      open: 8,
+      close: 20
+	},{
+      open: 8,
+      close: 20
+	},{
+      open: 8,
+      close: 20
+	},{
+      open: 8,
+      close: 20
+	}],
+
+	[{
+      open: 8,
+      close: 20
+    },{
+      open: 8,
+      close: 20
+	},{
+      open: 8,
+      close: 20
+	},{
+      open: 8,
+      close: 20
+	},{
+      open: 8,
+      close: 20
+	},{
+      open: 8,
+      close: 20
+	},{
+      open: 8,
+      close: 20
+	}],
+
+	[{
+      open: 8,
+      close: 20
+    },{
+      open: 8,
+      close: 20
+	},{
+      open: 8,
+      close: 20
+	},{
+      open: 8,
+      close: 20
+	},{
+      open: 8,
+      close: 20
+	},{
+      open: 8,
+      close: 20
+	},{
+      open: 8,
+      close: 20
+	}],
+
+	[{
+      open: 8,
+      close: 20
+    },{
+      open: 8,
+      close: 20
+	},{
+      open: 8,
+      close: 20
+	},{
+      open: 8,
+      close: 20
+	},{
+      open: 8,
+      close: 20
+	},{
+      open: 8,
+      close: 20
+	},{
+      open: 8,
+      close: 20
+	}],
+
+	[{
+      open: 8,
+      close: 20
+    },{
+      open: 8,
+      close: 20
+	},{
+      open: 8,
+      close: 20
+	},{
+      open: 8,
+      close: 20
+	},{
+      open: 8,
+      close: 20
+	},{
+      open: 8,
+      close: 20
+	},{
+      open: 8,
+      close: 20
+	}],
 ];
 
 
