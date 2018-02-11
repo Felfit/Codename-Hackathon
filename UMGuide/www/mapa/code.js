@@ -38,20 +38,16 @@ function dofunction(params) {
 }
 
 function findMe() {
-  var coords = [];
   navigator.geolocation.getCurrentPosition(function(pos){
-    coord = [pos.coords.longitude, pos.coords.latitude];
+    createMarker([pos.coords.longitude, pos.coords.latitude]);
   });
-  map.flyTo({center : coords});
-  console.log(coords);
-
-  createMarker(coords);
 }
 
 function createMarker(coord) {
   var el = $("<img>")
-            .class('marker')
-            .attr("src","img/youarehere.png");
+            .addClass('marker')
+            .attr("src","img/youarehere.png").get(0);
+  console.log(el);
 
   // make a marker for each feature and add to the map
   new mapboxgl.Marker(el)
@@ -70,7 +66,7 @@ var directions = new MapboxDirections({
   profile: 'walking',
   controls: {
     inputs: false,
-    instructions: true,
+    instructions: false,
     profileSwitcher: false
   }
 });
