@@ -1,8 +1,0 @@
-<script type="text/javascript" src="schedule.js"></script>
-<script type="text/javascript">
-	var events = new schedule();
-	events.addEvent("Daniel", [{start: Date.now(), end: Date.now()+60}]);
-	events.saveEvents();
-	events.removeEvent(0);
-	console.log(events.getSavedEvents().events, events);
-</script>

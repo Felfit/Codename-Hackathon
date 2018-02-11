@@ -1,12 +1,18 @@
 function toggleSideBar(){
-    var width = $(".sidebar").width()
-    if(width == 0)
+    var width = $(".sidebar").width();
+    var zIndex = $("toToggle").attr('zIndex');
+
+    if(width <= 0){
+        zIndex = 999;
         width = 235;
-    else 
+    } else { 
         width = 0;
+        zIndex = -1;
+    }
 
     $(".sidebar").css('width', width);
     $(".sidebar").css('right', width);
+    $(".toToggle").css('z-index', zIndex);
 }
 
 function addExclusiveClickedClass(elemClicked){

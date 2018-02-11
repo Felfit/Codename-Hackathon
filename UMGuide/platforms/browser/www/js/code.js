@@ -15,6 +15,31 @@ var map = new mapboxgl.Map({
     maxBounds: bounds
 });
 
+function isOpen(i){
+  var d = new Date();
+  var day = d.getDay();
+  if (schedules[i] === null) return "";
+  var open = schedules[i][day].open * 1000;
+  var close = schedules[i][day].close * 1000;
+
+  var currentTime =(d.getTime() - d.setHours(0,0,0,0));
+  console.log("isto" + currentTime);
+  console.log(open);
+  console.log(close);
+
+  if(currentTime > open){
+    if(currentTime < close){
+      return "Open, closes at " + new Date(close).getHours() + ":" + new Date(close).getMinutes();
+    }
+    else{
+      return "Closed"
+    }
+  }
+  else{
+    return "Closed, opens at " + new Date(open).getHours() + ":" + new Date(open).getMinutes();
+  }
+}
+
 // add markers to map
 geojson.features.forEach(function(marker,i) {
 
@@ -27,31 +52,28 @@ geojson.features.forEach(function(marker,i) {
   new mapboxgl.Marker(el)
   .setLngLat(marker.geometry.coordinates)
   .setPopup(new mapboxgl.Popup({ offset: 25 }) // add popups
-  .setHTML('<h3>' + marker.properties.title + '</h3><p>' + marker.properties.description + '</p>'
-+'<input type="button" class="btn" onclick="dofunction('+i+')" value="Click Me!">'))
+  .setHTML(
+    '<h3>' + marker.properties.title + '</h3><p>' + marker.properties.description + '</p><p>' + isOpen(i) + '</p>'
+    + '<input type="button" class="btn" onclick="moreInfo('+i+')" value="More info">'))
+
   .addTo(map);
 });
 
 function dofunction(params) {
-    map.flyTo({center : geojson.features[params].geometry.coordinates})
-    console.log(geojson.features[params].geometry.coordinates)
+    console.log(params);
 }
 
 function findMe() {
-  var coords = [];
   navigator.geolocation.getCurrentPosition(function(pos){
-    coord = [pos.coords.longitude, pos.coords.latitude];
+    createMarker([pos.coords.longitude, pos.coords.latitude]);
   });
-  map.flyTo({center : coords});
-  console.log(coords);
-
-  createMarker(coords);
 }
 
 function createMarker(coord) {
-  var el = document.createElement('img');
-  el.className = 'marker';
-  el.src = "img/youarehere.png";
+  var el = $("<img>")
+            .addClass('marker')
+            .attr("src","img/youarehere.png").get(0);
+  console.log(el);
 
   // make a marker for each feature and add to the map
   new mapboxgl.Marker(el)
@@ -63,3 +85,16 @@ map.on("mousedown", function(e){
   var coord = e.lngLat;
   console.log([coord.lng, coord.lat]);
 });
+
+var directions = new MapboxDirections({
+  accessToken: mapboxgl.accessToken,
+  unit: 'metric',
+  profile: 'walking',
+  controls: {
+    inputs: false,
+    instructions: false,
+    profileSwitcher: false
+  }
+});
+
+map.addControl(directions, 'bottom-left');

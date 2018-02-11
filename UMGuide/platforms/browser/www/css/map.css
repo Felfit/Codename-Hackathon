@@ -4,8 +4,11 @@
     z-index: 500;
     border-radius: 15px;
 	display: block;
-    margin-top: 90px;
+    margin-top: 10%;
     margin-bottom: 50px;
     margin-left: 10%;
     background: rgba(114, 114, 114, 0.62);
 }
+
+#map { position:absolute; top:0; bottom:0; width:100%; }
+body { margin:0; padding:0; }
