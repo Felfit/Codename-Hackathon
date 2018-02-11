@@ -1,8 +1,8 @@
 mapboxgl.accessToken = 'pk.eyJ1IjoiZmVsZml0IiwiYSI6ImNqZGhhb2U3YjB1dHYycXA0dHFpdWJqa2sifQ.-anNT3-EVf37K75qjxrNqw';
 // Sets bounds to UMinho
 var bounds = [
-    [-8.403125, 41.557518], // Southwest coordinates , 
-    [-8.393239, 41.565339]  // Northeast coordinates , 
+    [-8.403225, 41.557618], // Southwest coordinates , 
+    [-8.393139, 41.565239]  // Northeast coordinates , 
 ];
 
 var map = new mapboxgl.Map({
