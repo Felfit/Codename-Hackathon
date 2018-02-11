@@ -24,7 +24,7 @@
 }
 
 #findme:active {
-	filter: blur(5px);
+	filter: blur(3px);
 }
 
 .notColored {
@@ -45,5 +45,9 @@
   width: 8%;
   max-width: 50px;
   display: none;
+}
 
+.pois {
+  width: 8%;
+  max-width: 50px;
 }
