@@ -1,5 +1,6 @@
 // Add repositories to the .projects
 function getEvents(){
+  $('#events').html('');
 	$.get(`https://felfit.github.io/fakedatabase/data.json`, function(data, status){
 		if(status=='success'){
       var html = "";
