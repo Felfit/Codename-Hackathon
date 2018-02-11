@@ -97,4 +97,4 @@ var directions = new MapboxDirections({
   }
 });
 
-map.addControl(directions, 'bottom-left');
+//map.addControl(directions, 'bottom-left');
