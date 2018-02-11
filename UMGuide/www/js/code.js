@@ -23,6 +23,9 @@ function isOpen(i){
   var close = schedules[i][day].close * 3600000;
 
   var currentTime =(d.getTime() - d.setHours(0,0,0,0));
+  console.log("isto" + currentTime);
+  console.log(open);
+  console.log(close);
 
   if(currentTime > open){
     if(currentTime < close){
@@ -65,12 +68,18 @@ function createMarker(coord) {
   var el = $("<img>")
             .addClass('marker')
             .attr("src","img/youarehere.png").get(0);
+  console.log(el);
 
   // make a marker for each feature and add to the map
   new mapboxgl.Marker(el)
   .setLngLat(coord)
   .addTo(map)
 }
+
+map.on("mousedown", function(e){
+  var coord = e.lngLat;
+  console.log([coord.lng, coord.lat]);
+});
 
 var directions = new MapboxDirections({
   accessToken: mapboxgl.accessToken,
