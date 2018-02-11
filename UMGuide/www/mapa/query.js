@@ -1,5 +1,8 @@
 $(window).on("load hashchange",function(){
 	var hash = location.hash;
+  if(location.hash.startsWith("q=")){
+    return false;
+  }
 	var queries = hash.split(" ");
 	var features = geojson.features;
 	var quality = [];

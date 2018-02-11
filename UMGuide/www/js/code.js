@@ -41,9 +41,7 @@ function isOpen(i){
 geojson.features.forEach(function(marker,i) {
 
   // create a HTML element for each feature
-  var el = document.createElement('img');
-  el.className = 'marker';
-  el.src = "img/"+(i)+".png";
+  var el = $("<img>").addClass("marker").attr("src","img/"+(i)+".png").get(0);
 
   // make a marker for each feature and add to the map
   new mapboxgl.Marker(el)
@@ -56,9 +54,7 @@ geojson.features.forEach(function(marker,i) {
 });
 
 bares.forEach(function(marker, i) {
-  var el = document.createElement('img');
-  el.className = 'bares';
-  el.src = "img/bar.png";
+  var el = $("<img>").addClass("bares").attr("src","img/bar.png").get(0);
 
   new mapboxgl.Marker(el)
   .setLngLat(bares[i])
@@ -77,13 +73,13 @@ pois.forEach(function(marker, i) {
 
 function findMe() {
   navigator.geolocation.getCurrentPosition(function(pos){
-    createMarker([pos.coords.longitude, pos.coords.latitude]);
+    removeHereMarker();
+    createHereMarker([pos.coords.longitude, pos.coords.latitude]);
   });
 }
 
 function toggleBares(elemClicked) {
 	$('.bares').toggle();
-
 	var notColored = $(elemClicked).hasClass('notColored');
 	if(notColored){
 		$(elemClicked).removeClass('notColored');
@@ -92,9 +88,14 @@ function toggleBares(elemClicked) {
 	}
 }
 
-function createMarker(coord) {
+function removeHereMarker() {
+  $(".here").remove();
+}
+
+function createHereMarker(coord) {
   var el = $("<img>")
-            .addClass('marker')
+            .addClass('here')
+            .addClass("marker")
             .attr("src","img/youarehere.png").get(0);
 
   // make a marker for each feature and add to the map
