@@ -8,3 +8,10 @@ function toggleSideBar(){
     $(".sidebar").css('width', width);
     $(".sidebar").css('right', width);
 }
+
+function addExclusiveClickedClass(elemClicked){
+    var clicked = $('.clicked').eq(0);
+
+    clicked.removeClass('clicked');
+    $(elemClicked).addClass('clicked');
+}

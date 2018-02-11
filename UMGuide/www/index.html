@@ -17,6 +17,7 @@
 </head>
 
 <body>
+
 	<nav class="navbar navbar-dark bg-dark fixed-top">
 		<a class="navbar-brand" href="#">UMinho Guide</a>
 		<button class="navbar-toggler navbar-toggler-right" onclick="toggleSideBar()" type="button">
@@ -36,12 +37,12 @@
 									<i class="fa fa-search" style="color: White"></i></button>
 						</div>
 					</div>
-					<li class="nav-item">
+					<li class="nav-item" onclick="addExclusiveClickedClass(this)">
 						<a class="nav-link" href="#">
 							<i class="fa fa-grey fa-map-marker"></i> Mapa
 						</a>
 					</li>
-						<li class="nav-item">
+					<li class="nav-item" onclick="addExclusiveClickedClass(this)">
 						<a class="nav-link" href="#">
 							<i class="fa fa-grey fa-calendar"></i> Eventos
 						</a>
@@ -51,8 +52,12 @@
 		</ul>
 	</nav>
 
-	<iframe id="map" src="mapa/index.html" class="border-0 w-100 h-100"></iframe>
+		<iframe src="mapa/index.html" class="border-0 w-100 h-100"></iframe>
+	</div> 
 
+	<div class="toToggle" onclick="toggleSideBar()" display:'none'> </div>
+
+	<script src="./js/information.js"></script>
 	<script src="./js/sidebar.js"></script>
 </body>
 
