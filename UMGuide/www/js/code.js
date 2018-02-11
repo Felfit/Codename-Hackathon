@@ -55,10 +55,30 @@ geojson.features.forEach(function(marker,i) {
   .addTo(map);
 });
 
+bares.forEach(function(marker, i) {
+  var el = document.createElement('img');
+  el.className = 'bares';
+  el.src = "img/bar.png";
+
+  new mapboxgl.Marker(el)
+  .setLngLat(bares[i])
+  .addTo(map);
+});
+
 function findMe() {
   navigator.geolocation.getCurrentPosition(function(pos){
     createMarker([pos.coords.longitude, pos.coords.latitude]);
   });
+}
+
+function toggleBares(elemClicked) {
+	$('.bares').toggle();
+	var notColored = $(elemClicked).hasClass('notColored');
+	if(notColored){
+		$(elemClicked).removeClass('notColored');
+	} else {
+		$(elemClicked).addClass('notColored');
+	}
 }
 
 function createMarker(coord) {
