@@ -49,9 +49,9 @@ function findMe() {
 }
 
 function createMarker(coord) {
-  var el = document.createElement('img');
-  el.className = 'marker';
-  el.src = "img/youarehere.png";
+  var el = $("<img>")
+            .class('marker')
+            .attr("src","img/youarehere.png");
 
   // make a marker for each feature and add to the map
   new mapboxgl.Marker(el)
@@ -63,3 +63,16 @@ map.on("mousedown", function(e){
   var coord = e.lngLat;
   console.log([coord.lng, coord.lat]);
 });
+
+var directions = new MapboxDirections({
+  accessToken: mapboxgl.accessToken,
+  unit: 'metric',
+  profile: 'walking',
+  controls: {
+    inputs: false,
+    instructions: true,
+    profileSwitcher: false
+  }
+});
+
+map.addControl(directions, 'bottom-left');
