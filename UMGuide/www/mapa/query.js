@@ -14,8 +14,8 @@ $(window).on("load hashchange",function(){
 		if(features[i].properties.description) {
 			q = q.concat(features[i].properties.description.split(" "));
 		}
-		if(features[i].properties.description) {
-			q = q.concat(features[i].properties.description.tags.split(" "));
+		if(features[i].properties.tags) {
+			q = q.concat(features[i].properties.tags.split(" "));
 		}
 		for(var j = 0; j < queries.length; j++){
 			for(var k = 0; k < q.length; k++){
