@@ -11,7 +11,8 @@ var geojson = {
       },
       properties: {
         title: 'Complexo Pedagógico 1',
-        description: ''
+        description: '',
+        tags: ['1','cp1','cp 1','auditório','bar','reprografia']
       }
     },
     {
@@ -22,7 +23,8 @@ var geojson = {
         },
         properties: {
           title: 'Complexo Pedagógico 2',
-          description: ''
+          description: '',
+          tags: ['2','cp2','cp 2','auditório','bar','reprografia']
         }
     },
     {
@@ -33,7 +35,8 @@ var geojson = {
         },
         properties: {
           title: 'Complexo Pedagógico 3',
-          description: ''
+          description: '',
+          tags: ['3','cp3','cp 3','auditório','bar','reprografia']
         }
     },
     {
@@ -44,7 +47,8 @@ var geojson = {
       },
       properties: {
         title: 'Biblioteca Geral | Escola Superior de Enfermagem',
-        description: ''
+        description: '',
+        tags: ['4','cp4','cp 4','biblioteca','salas 24','sofás','salas de estudo','estudo']
       }
     },
     {
@@ -54,8 +58,9 @@ var geojson = {
           coordinates: [-8.396806, 41.560328], 
         },
         properties: {
-          title: 'Instituto das Artes e Ciencias Humanas',
-          description: ''
+          title: 'Instituto de Letras e Ciências Humanas',
+          description: '',
+          tags: ['5','cp5','cp 5','serviços académicos','serviços', 'servico','artes']
         }
     },
     {
@@ -66,7 +71,8 @@ var geojson = {
         },
         properties: {
           title: 'Escola de Ciencias',
-          description: ''
+          description: '',
+          tags: ['6','cp6','cp 6','matematica']
         }
     },
     {
@@ -77,7 +83,8 @@ var geojson = {
         },
         properties: {
           title: 'Escola de Engenharia',
-          description: ''
+          description: '',
+          tags: ['7','cp7','cp 7','di','departamento de informática', 'informatica']
         }
     },
     {
@@ -88,7 +95,8 @@ var geojson = {
         },
         properties: {
           title: 'Escola de Economia e Gestao',
-          description: ''
+          description: '',
+          tags: ['8','cp8','cp 8']
         }
     },
     {
@@ -99,7 +107,8 @@ var geojson = {
         },
         properties: {
           title: 'Complexo Desportivo',
-          description: ''
+          description: '',
+          tags: ['9','cp9','cp 9','desporto','pavilhão','sc braga','futsal','voleibol','enfermaria']
         }
     },
     {
@@ -110,7 +119,8 @@ var geojson = {
         },
         properties: {
           title: 'Serviços Técnicos',
-          description: ''
+          description: '',
+          tags: ['10','cp10','cp 10','serviços','tecnicos','?']
         }
     },
     {
@@ -121,7 +131,8 @@ var geojson = {
         },
         properties: {
           title: 'Restaurante Cantina Grill',
-          description: ''
+          description: '',
+          tags: ['11','cp11','cp 11','comida','bar','senhas']
         }
     },
     {
@@ -132,7 +143,8 @@ var geojson = {
         },
         properties: {
           title: 'Serviços de Ação Social',
-          description: ''
+          description: '',
+          tags: ['12','cp12','cp 12','serviços', 'servico','sasum']
         }
     },
     {
@@ -143,7 +155,8 @@ var geojson = {
         },
         properties: {
           title: 'Instituto de Educação',
-          description: ''
+          description: '',
+          tags: ['13','cp13','cp 13']
         }
     },
     {
@@ -154,7 +167,8 @@ var geojson = {
         },
         properties: {
           title: 'Escola de Psicologia',
-          description: ''
+          description: '',
+          tags: ['14','cp14','cp 14']
         }
     },
     {
@@ -165,7 +179,8 @@ var geojson = {
         },
         properties: {
           title: 'Instituto de Ciências Sociais',
-          description: ''
+          description: '',
+          tags: ['15','cp15','cp 15','social']
         }
     },
     {
@@ -176,7 +191,8 @@ var geojson = {
         },
         properties: {
           title: 'Escola de Engenharia 2',
-          description: ''
+          description: '',
+          tags: ['16','cp16','cp 16','engenharia']
         }
     },
     {
@@ -187,7 +203,8 @@ var geojson = {
         },
         properties: {
           title: 'Escola de Direito',
-          description: ''
+          description: '',
+          tags: ['17','cp17','cp 17','leis']
         }
     },
     {
@@ -198,7 +215,8 @@ var geojson = {
         },
         properties: {
           title: 'Instituto para a Bio-Sustentabilidade',
-          description: ''
+          description: '',
+          tags: ['18','cp18','cp 18','biologia']
         }
     },
     {
@@ -209,7 +227,8 @@ var geojson = {
         },
         properties: {
           title: 'Escola de Medicina',
-          description: ''
+          description: '',
+          tags: ['19','cp19','cp 19','hospital']
         }
     }
     ]

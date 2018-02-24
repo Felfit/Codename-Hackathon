@@ -3,36 +3,36 @@ $(window).on("load hashchange",function(){
   	if(location.hash.startsWith("q=")){
     	return false;
   	}
-  	console.log(hash);
-	var queries = hash.split("-");
+  	hash = hash.slice(2);
 	var features = geojson.features;
-	var quality = [];
 	var max = 0;
 	var maxIndex = null;
+	var result;
 	for(var i = 0; i < features.length; i++){
 		var result = [];
 		var q = [];
 		if(features[i].properties.title) {
-			q = q.concat(features[i].properties.title.split(" "));
+			q.push(features[i].properties.title);
 		}
 		if(features[i].properties.description) {
-			q = q.concat(features[i].properties.description.split(" "));
+			q.push(features[i].properties.description);
 		}
-		if(features[i].properties.description) {
-			q = q.concat(features[i].properties.description.tags.split(" "));
-		}
-		for(var j = 0; j < queries.length; j++){
-			for(var k = 0; k < q.length; k++){
-				var val = similarity(q[k], queries[j]);
-				result.push(val);
-				if(val > max){
-					max = val;
-					maxIndex = i;
-				}
+		if(features[i].properties.tags) {
+			for(var j = 0, length = features[i].properties.tags.length; j < length; j++){
+				q.push(features[i].properties.tags[j]);
 			}
 		}
+		for(var k = 0; k < q.length; k++){
+			var val = similarity(q[k], hash);
+			result.push(val);
+			if(val > max){
+				max = val;
+				maxIndex = i;
+			}
+		}
+		console.log(features[i].properties.title, result);
 	}
-  if(maxIndex !== null){
+  if(maxIndex !== null && max > 0.25){
     new mapboxgl.Popup({closeOnClick: false})
       .setLngLat(features[maxIndex].geometry.coordinates)
       .setHTML(
